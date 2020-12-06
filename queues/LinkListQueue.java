@@ -59,10 +59,12 @@ public class LinkListQueue {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		LinkListQueue llq1 = new LinkListQueue();
 		for (int i = 0; i < 5; i++) {
-			llq1.enQueue( Integer.valueOf(reader.readLine()) );
+			llq1.enQueue(Integer.parseInt(reader.readLine()));
 		}
 		llq1.deQueue();
 		System.out.println("front-> "+llq1.showFront());
 		System.out.println("rear-> "+llq1.showRear());
+
+		reader.close();
 	}
 }
